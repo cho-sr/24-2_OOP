@@ -59,8 +59,3 @@ class Call(private val apiUrl: String) {
             }
     }
 }
-fun checkHelicopterTakeoffConditions(data: MarineObservation): Boolean {
-    return data.ws <= 10.0 &&       // 풍속 10m/s 이하
-            data.wh <= 2.0 &&        // 유의파고 2m 이하
-            data.ta >= -10.0         // 기온 -10°C 이상
-}
